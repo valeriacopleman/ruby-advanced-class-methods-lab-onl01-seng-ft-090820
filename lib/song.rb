@@ -46,19 +46,11 @@ class Song
     end
   end
   
-  def self.new_from_filename(file)
+  #def self.new_from_filename(file)
     #rows = file.split("\n")
+    #end 
     
-      new_file =file.split("-")
-      artist_name = new_file[0]
-      name = new_file[1].gsub!(".mp3")
-      song = self.new
-      song.name = name
-      song.artist_name = artist_name
-      
-      song
     
-  end 
   
   def self.destroy_all
     self.all.clear
