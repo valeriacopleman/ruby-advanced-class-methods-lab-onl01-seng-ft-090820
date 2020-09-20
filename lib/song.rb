@@ -50,7 +50,15 @@ class Song
     #rows = file.split("\n")
     #end 
     
-    
+    def self.new_from_filename(filename)
+    new_file = filename.split(" - ") #'initializes a song and artist_name based on the filename format'
+    artist_name = new_file[0]
+    song_name = new_file[1].gsub(".mp3","")
+    song = self.new
+    song.name = song_name
+    song.artist_name = artist_name
+    song
+  end
   
   def self.destroy_all
     self.all.clear
